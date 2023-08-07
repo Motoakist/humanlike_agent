@@ -34,7 +34,7 @@ const modelPath = "https://cdn.jsdelivr.net/gh/edu-053/AgentInteractionResources
 const requiredResources = [
     "https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js",
     "https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js",
-    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@e033a1a977b279c049a19a1ed33bc5dabb986f18/indexLibrary/indexLibrary.js",
+    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@032a541502033f6aca88ed8845c876ffaa8e8c10/indexLibrary/indexLibrary.js",
 
 ];
 
