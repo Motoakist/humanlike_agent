@@ -34,7 +34,7 @@ const modelPath = "https://cdn.jsdelivr.net/gh/edu-053/AgentInteractionResources
 const requiredResources = [
     "https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js",
     "https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js",
-    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@8379e7aa85b596232b49a3e750a7909773751fd9/indexLibrary/indexLibrary.js",
+    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@25481e198550509a02c58a57177ba3984aeacb33/indexLibrary/indexLibrary.js",
 
 ];
 
@@ -55,7 +55,7 @@ const initExp = () => {
     console.log("ロード");
     indexLibrary = new IndexLibrary(debug, serverURL, modelPath, position);
     indexLibrary.onload();
-    indexLibrary.onStartSpeak();
+    
     
 };
 
@@ -110,6 +110,7 @@ function handleUserInput(event) {
     event.preventDefault();
     const message = chatInput.value.trim();
     if (message !== '') {
+        indexLibrary.App_StartSpeak();
         messages.push({
             'role': 'user',
             'content': message
