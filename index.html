@@ -8,7 +8,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 <body>
+    <div class = "chat_agent">
         <canvas id="myCanvas"></canvas>
+
+        <div class = "textbox">
+            <div class="container messages">
+            <!-- Chat messages will be added here -->
+            </div>
+        
+            <form class="chat-form" id="chat-form">
+                <input type="text" class="chat-input" id="chat-input" placeholder="話しかけて！">
+                <button type="submit" class="chat-send" id="chat-send">
+                <!-- <img src="send-icon.png" width="20px" height="20px" alt="Send" id="send-img"> -->
+                送信
+                </button>
+                <div class="loader"></div>
+            </form>
+        </div>
+    </div>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
