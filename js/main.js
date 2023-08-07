@@ -16,7 +16,7 @@ const modelPath = "https://cdn.jsdelivr.net/gh/edu-053/AgentInteractionResources
 const requiredResources = [
     "https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js",
     "https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js",
-    "https://e-sato.net/hiyori_3d_pixi/js/IndexLibrary_pareto.js",
+    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@27e6f919e94e33c1ffff930fbd5d439b3067a3d8/indexLibrary/indexLibrary.js",
 
 ];
 
