@@ -1,12 +1,12 @@
 const position = {
-    boxWidth: 4000,
+    boxWidth: 20000,
     // boxHeight: 700,
-    boxHeight: 4000,
+    boxHeight: 20000,
     // modelScale: 0.45,
     modelScale: 1,
     modelX: 0,
     // modelY: 500,
-    modelY: 0,
+    modelY: 2000,
 };
 
 const serverURL = "https://a48e-2400-2651-41c2-1500-4405-5e59-5c98-3b57.jp.ngrok.io";
@@ -16,7 +16,7 @@ const modelPath = "https://cdn.jsdelivr.net/gh/edu-053/AgentInteractionResources
 const requiredResources = [
     "https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js",
     "https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js",
-    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@529f30884765a5b38c1f0bd2834b9676887e6da2/indexLibrary/indexLibrary.js",
+    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@f11b2a269b9b472c6f35e4c81ccf1456f86c6395/indexLibrary/indexLibrary.js",
 
 ];
 
