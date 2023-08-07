@@ -34,7 +34,7 @@ const modelPath = "https://cdn.jsdelivr.net/gh/edu-053/AgentInteractionResources
 const requiredResources = [
     "https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js",
     "https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js",
-    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@25481e198550509a02c58a57177ba3984aeacb33/indexLibrary/indexLibrary.js",
+    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@cdedf4eb4e856bf094fac14312e711b83cabc1e8/indexLibrary/indexLibrary.js",
 
 ];
 
@@ -89,7 +89,7 @@ const OPENAI_URL = 'https://api.openai.com/v1/chat/completions';
 // Input Your OpenAI API Key Here. 
 // You can sign up and get API Key from here 
 // https://platform.openai.com/account/api-keys
-let apiKey = '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';
+let apiKey = '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';
 const messages = []; // store previous messages to remember whole conversation
 
 // Function to add a chat message to the container
@@ -110,7 +110,7 @@ function handleUserInput(event) {
     event.preventDefault();
     const message = chatInput.value.trim();
     if (message !== '') {
-        indexLibrary.App_StartSpeak();
+        
         messages.push({
             'role': 'user',
             'content': message
@@ -134,6 +134,7 @@ function handleUserInput(event) {
         .then(data => {
             hideLoader();
             const responseMessage = data.choices[0].message;
+            indexLibrary.App_StartSpeak();
             addMessage(responseMessage.content, false);
             messages.push(responseMessage);
         })
