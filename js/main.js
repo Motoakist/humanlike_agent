@@ -34,7 +34,7 @@ const modelPath = "https://cdn.jsdelivr.net/gh/edu-053/AgentInteractionResources
 const requiredResources = [
     "https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js",
     "https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js",
-    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@cdedf4eb4e856bf094fac14312e711b83cabc1e8/indexLibrary/indexLibrary.js",
+    "https://cdn.jsdelivr.net/gh/Motoakist/humanlike_agent@6125a5db3595504875885a3584ce5d17e5179aae/indexLibrary/indexLibrary.js",
 
 ];
 
@@ -89,7 +89,7 @@ const OPENAI_URL = 'https://api.openai.com/v1/chat/completions';
 // Input Your OpenAI API Key Here. 
 // You can sign up and get API Key from here 
 // https://platform.openai.com/account/api-keys
-let apiKey = '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';
+let apiKey = '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';
 const messages = []; // store previous messages to remember whole conversation
 
 // Function to add a chat message to the container
@@ -111,7 +111,11 @@ function handleUserInput(event) {
     const message = chatInput.value.trim();
     if (message !== '') {
         
-        messages.push({
+        messages.push(
+            {
+                role: "system", //役割
+                content: 'あなたは"百瀬ひより"16歳の女子高校生です。ひよりとして振る舞ってください。'
+              },{
             'role': 'user',
             'content': message
         });
@@ -135,6 +139,7 @@ function handleUserInput(event) {
             hideLoader();
             const responseMessage = data.choices[0].message;
             indexLibrary.App_StartSpeak();
+            setTimeout(() => indexLibrary.App_StopSpeak(), 3000);
             addMessage(responseMessage.content, false);
             messages.push(responseMessage);
         })
